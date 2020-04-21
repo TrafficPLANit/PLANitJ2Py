@@ -1,4 +1,5 @@
 package org.planit.python;
+import java.util.List;
 import java.util.logging.Logger;
 
 import org.planit.exceptions.PlanItException;
@@ -6,6 +7,7 @@ import org.planit.input.InputBuilderListener;
 import org.planit.io.input.PlanItInputBuilder;
 import org.planit.io.project.PlanItSimpleProject;
 import org.planit.project.CustomPlanItProject;
+import org.planit.time.TimePeriod;
 import org.planit.utils.misc.IdGenerator;
 
 import py4j.GatewayServer;
@@ -28,7 +30,7 @@ public class PLANitJ2Py {
     /**
      * The PLANit project available to Python users
      */
-    private CustomPlanItProject project = null;
+    private PlanItSimpleProject project = null;
         
     // Public
     
@@ -52,26 +54,9 @@ public class PLANitJ2Py {
      * @return simpleProject
      * @throws PlanItException 
      */
-    public PlanItSimpleProject initialiseSimpleProject() throws PlanItException {
-        this.project = new PlanItSimpleProject(); 
-        return (PlanItSimpleProject)project;
-    }
-    
-    public PlanItSimpleProject initialiseSimpleProject2(final String projectPath) throws PlanItException {
+    public PlanItSimpleProject initialiseSimpleProject(final String projectPath) throws PlanItException {
         this.project = new PlanItSimpleProject(projectPath); 
         return (PlanItSimpleProject)project;
-    }
-    
-    public void resetId() {
-        IdGenerator.reset();
-    }
-    
-    public InputBuilderListener createPlanItInputBuilder(final String projectPath) throws PlanItException {
-    	return new PlanItInputBuilder(projectPath);
-    }
-    
-    public CustomPlanItProject createCustomPlanItProject(final InputBuilderListener inputBuilderListener) {
-    	return new CustomPlanItProject(inputBuilderListener);
     }
 
     /** Due to he difficulty of creating an enum in Python (the gateway prefix to the path is inconvenient since it might change when changing
@@ -96,4 +81,3 @@ public class PLANitJ2Py {
     }
     
 }
-
