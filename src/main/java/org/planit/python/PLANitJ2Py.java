@@ -1,14 +1,8 @@
 package org.planit.python;
-import java.util.List;
 import java.util.logging.Logger;
 
 import org.planit.exceptions.PlanItException;
-import org.planit.input.InputBuilderListener;
-import org.planit.io.input.PlanItInputBuilder;
 import org.planit.io.project.PlanItSimpleProject;
-import org.planit.project.CustomPlanItProject;
-import org.planit.time.TimePeriod;
-import org.planit.utils.misc.IdGenerator;
 
 import py4j.GatewayServer;
 
