@@ -3,6 +3,7 @@ import java.util.logging.Logger;
 
 import org.planit.exceptions.PlanItException;
 import org.planit.io.project.PlanItSimpleProject;
+import org.planit.logging.Logging;
 
 import py4j.GatewayServer;
 
@@ -19,8 +20,7 @@ public class PLANitJ2Py {
     /**
      * Logger for this class
      */
-    private static final Logger LOGGER = Logger.getLogger(PLANitJ2Py.class.getName());
-    
+    private static Logger LOGGER = null;
     /**
      * The PLANit project available to Python users
      */
@@ -33,13 +33,20 @@ public class PLANitJ2Py {
      * @param args
      */
     public static void main(String[] args) {
+    	try {
+	        if (LOGGER == null) {
+	            LOGGER = Logging.createLogger(PLANitJ2Py.class);
+	          }
+    	}catch (Exception e) {
+			System.out.println("Failed to instantiate logger for PLANitJ2Py");
+		}
+	    	
         // create the PlanItProject entry point and configure it
         PLANitJ2Py entryPoint = new PLANitJ2Py();
         
         // start the server
         GatewayServer gatewayServer = new GatewayServer(entryPoint);
         gatewayServer.start();
-
     }
     
     /** Initialize the project. For now we by default create a "simple" project adopting the default I/O format. This method is invoked from
