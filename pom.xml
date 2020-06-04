@@ -5,7 +5,7 @@
 
 	<groupId>org.planit.python</groupId>
 	<artifactId>PLANitJ2Py</artifactId>
-	<version>0.0.4a1</version>
+	<version>0.0.4a3</version>
 	<packaging>jar</packaging>
 
 	<name>PLANitJ2Py</name>
@@ -15,10 +15,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>		
 		<maven.compiler.source>1.11</maven.compiler.source>
 		<maven.compiler.target>1.11</maven.compiler.target>
-		<planit.version>0.0.4a1</planit.version>		
-		<planitio.version>0.0.4a1</planitio.version>
+		<planit.version>0.0.4a3</planit.version>		
+		<planitio.version>0.0.4a3</planitio.version>
 		<!-- Change the property below to match the path of your PLANitPy2J rsc directory -->
-		<py2j.resource.directory>..\PLANitPy2J\rsc</py2j.resource.directory>
+		<py2j.resource.directory>..\PLANitPy2J\share\planit</py2j.resource.directory>
 	</properties>
 	
 	<dependencies>
@@ -31,7 +31,7 @@
 		<dependency>
 			<groupId>org.planit.io</groupId>
 			<artifactId>PLANitIO</artifactId>
-			<version>${planitio.version}</version>
+			<version>${planitio.version}</version>		
 		</dependency>		
 						
 		<dependency>
