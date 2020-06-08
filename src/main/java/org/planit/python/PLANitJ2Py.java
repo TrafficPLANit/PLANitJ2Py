@@ -53,11 +53,16 @@ public class PLANitJ2Py {
      * the Python side right after the gateway is opened in the Python wrapper (in def __init_java_gateway(self)) 
      * 
      * @return simpleProject
-     * @throws PlanItException 
      */
-    public PlanItSimpleProject initialiseSimpleProject(final String projectPath) throws PlanItException {
+    public PlanItSimpleProject initialiseSimpleProject(final String projectPath){
+      try {
         this.project = new PlanItSimpleProject(projectPath); 
-        return (PlanItSimpleProject)project;
+      }catch(Exception e)
+      {
+        LOGGER.severe(e.getMessage());
+      }
+     
+      return (PlanItSimpleProject)this.project;      
     }
 
     /** Due to he difficulty of creating an enum in Python (the gateway prefix to the path is inconvenient since it might change when changing
