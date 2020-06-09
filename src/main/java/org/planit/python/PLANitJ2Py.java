@@ -38,15 +38,15 @@ public class PLANitJ2Py {
 	            LOGGER = Logging.createLogger(PLANitJ2Py.class);
 	          }
     	}catch (Exception e) {
-			System.out.println("Failed to instantiate logger for PLANitJ2Py");
-		}
+  			System.out.println("Failed to instantiate logger for PLANitJ2Py");
+  		}
 	    	
-        // create the PlanItProject entry point and configure it
-        PLANitJ2Py entryPoint = new PLANitJ2Py();
-        
-        // start the server
-        GatewayServer gatewayServer = new GatewayServer(entryPoint);
-        gatewayServer.start();
+      // create the PlanItProject entry point and configure it
+      PLANitJ2Py entryPoint = new PLANitJ2Py();
+      
+      // start the server
+      GatewayServer gatewayServer = new GatewayServer(entryPoint);
+      gatewayServer.start();
     }
     
     /** Initialize the project. For now we by default create a "simple" project adopting the default I/O format. This method is invoked from
