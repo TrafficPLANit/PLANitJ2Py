@@ -14,7 +14,7 @@
 	<packaging>jar</packaging>
 
 	<name>PLANitJ2Py</name>
-	<url>https://github.sydney.edu.au/planit/planitj2py</url>
+	<url>https://github.com/TrafficPLANit/planitj2py</url>
 
 	<properties>
 		<py4j.version>0.10.9</py4j.version>
