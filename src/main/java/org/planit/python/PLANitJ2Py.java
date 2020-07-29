@@ -1,9 +1,11 @@
 package org.planit.python;
 
 import java.util.logging.Logger;
-import org.planit.exceptions.PlanItException;
+
 import org.planit.io.project.PlanItSimpleProject;
 import org.planit.logging.Logging;
+import org.planit.utils.exceptions.PlanItException;
+
 import py4j.GatewayServer;
 
 /**
