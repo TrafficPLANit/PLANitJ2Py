@@ -15,6 +15,16 @@
 
 	<name>PLANitJ2Py</name>
 	<url>https://github.com/TrafficPLANit/planitj2py</url>
+	
+	<!-- license based on the one published on the website -->
+    <licenses>
+      <license>
+        <name>PLANit license based on modified BSD</name>
+        <url>${planit.website.url}/docs/licenses/LICENSE.txt</url>
+        <distribution>repo</distribution>
+        <comments>A slightly modified version of a modified BSD license</comments>
+      </license>
+    </licenses>		
 
 	<dependencies>
 
