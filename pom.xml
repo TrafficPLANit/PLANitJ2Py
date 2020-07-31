@@ -24,19 +24,7 @@
         <distribution>repo</distribution>
         <comments>A slightly modified version of a modified BSD license</comments>
       </license>
-    </licenses>	
-    
-    <build>
-	    <resources>
-	        <resource>
-	            <directory>src/main/resources</directory>
-	            <excludes>
-	            	<!-- only used for internal formatting of logging statements -->
-	                <exclude>*.properties</exclude>
-	            </excludes>
-	        </resource>
-	    </resources>    
-    </build>	
+    </licenses>	   
 
 	<dependencies>
 
@@ -52,5 +40,34 @@
 		</dependency>
 
 	</dependencies>
+	
+    <build>
+	    <resources>
+	        <resource>
+	            <directory>src/main/resources</directory>
+	            <excludes>
+	            	<!-- only used for internal formatting of logging statements -->
+	                <exclude>*.properties</exclude>
+	            </excludes>
+	        </resource>
+	    </resources>    
+	    
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+			</plugin>
+		</plugins>	    
+    </build>	
 
 </project>
