@@ -4,12 +4,19 @@
   <modelVersion>4.0.0</modelVersion>  
   	
 	<parent>
-		<groupId>org.planit.all</groupId>
-		<artifactId>PLANitAll</artifactId>
+    <groupId>org.planit.parentpom</groupId>
+    <artifactId>PLANitParentPom</artifactId>
 		<version>0.1.1a1</version>
 	</parent>
 
 	<groupId>org.planit.python</groupId>
+	 <description>
+    Interface to allow the Python side of PLANit (using Py4J) to connect to the Java side of PLANit.
+    To use this interface alongside the rest of PLANit on the Python side of things, one must subsequently 
+    run pom_fat_jar_python.xml which is a separate build to gather all required resources and copy them across 
+    with the J2Py build, to the Py2J repo's share/planit to allow all functionality be available for building
+    the Python package
+  </description>
 	<artifactId>PLANitJ2Py</artifactId>
 	<packaging>jar</packaging>
 
