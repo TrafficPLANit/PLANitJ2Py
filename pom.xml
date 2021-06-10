@@ -5,7 +5,7 @@
   	
 	<parent>
     <groupId>org.planit.parentpom</groupId>
-    <artifactId>PLANitParentPom</artifactId>
+    <artifactId>planit-parentpom</artifactId>
 		<version>0.2.1a1</version>
 	</parent>
 
@@ -17,10 +17,10 @@
     with the J2Py build, to the Py2J repo's share/planit to allow all functionality be available for building
     the Python package
   </description>
-	<artifactId>PLANitJ2Py</artifactId>
+	<artifactId>planit-j2py</artifactId>
 	<packaging>jar</packaging>
 
-	<name>PLANitJ2Py</name>
+	<name>planit-j2py</name>
 	<url>https://github.com/TrafficPLANit/planitj2py</url>
 	
 	<!-- license based on the one published on the website -->
@@ -38,7 +38,7 @@
 		<!-- version inherited from parent -->
 		<dependency>
 			<groupId>org.planit.io</groupId>
-			<artifactId>PLANitIO</artifactId>
+			<artifactId>planit-io</artifactId>
 		</dependency>
 
 		<dependency>
