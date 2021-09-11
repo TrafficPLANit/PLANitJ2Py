@@ -84,8 +84,8 @@ public class PLANitJ2Py {
     public Enum createEnum(String enumCanonicalName, String EnumEntryName) throws ClassNotFoundException, PlanItException {
         Class<?> enumClass = Class.forName(enumCanonicalName);
         if(!enumClass.isEnum()) {
-            String errorMessage = "Class is not an enum";
-            LOGGER.severe(errorMessage);
+            String errorMessage = String.format("Class %s is not an enum",enumCanonicalName);
+            LOGGER.severe(errorMessage );
             throw new PlanItException(errorMessage);
         }
         return Enum.valueOf((Class<Enum>)enumClass,EnumEntryName);        
