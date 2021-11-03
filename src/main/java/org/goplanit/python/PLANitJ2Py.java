@@ -1,10 +1,10 @@
-package org.planit.python;
+package org.goplanit.python;
 
 import java.util.logging.Logger;
 
-import org.planit.io.project.PlanItSimpleProject;
-import org.planit.logging.Logging;
-import org.planit.utils.exceptions.PlanItException;
+import org.goplanit.logging.Logging;
+import org.goplanit.utils.exceptions.PlanItException;
+import org.goplanit.io.project.PlanItSimpleProject;
 
 import py4j.GatewayServer;
 

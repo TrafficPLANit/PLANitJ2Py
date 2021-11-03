@@ -4,12 +4,12 @@
   <modelVersion>4.0.0</modelVersion>  
   	
 	<parent>
-    <groupId>org.planit.parentpom</groupId>
+    <groupId>org.goplanit.parentpom</groupId>
     <artifactId>planit-parentpom</artifactId>
 		<version>0.2.1a1</version>
 	</parent>
 
-	<groupId>org.planit.python</groupId>
+	<groupId>org.goplanit.python</groupId>
 	 <description>
     Interface to allow the Python side of PLANit (using Py4J) to connect to the Java side of PLANit.
     To use this interface alongside the rest of PLANit on the Python side of things, one must subsequently 
@@ -37,7 +37,7 @@
 
 		<!-- version inherited from parent -->
 		<dependency>
-			<groupId>org.planit.io</groupId>
+			<groupId>org.goplanit.io</groupId>
 			<artifactId>planit-io</artifactId>
 		</dependency>
 
