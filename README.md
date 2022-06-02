@@ -1,5 +1,8 @@
 # PLANitJ2Py
 
+![Master Branch](https://github.com/TrafficPLANit/PLANit/actions/workflows/maven_master.yml/badge.svg?branch=master)
+![Develop Branch](https://github.com/TrafficPLANit/PLANit/actions/workflows/maven_develop.yml/badge.svg?branch=develop)
+
 Java part of PLANit-Python interface. Allowing the Python component of PLANit to access the Java components.
 
 This project solely exists to provide the bootstrap Java entry point for PLANit which is invoked from the Python side via a subprocess call to Java. We use [Py4J](www.py4j.org) to establish the connection. 
@@ -20,34 +23,9 @@ PLANit J2Py has the following PLANit specific dependencies (See pom.xml):
 * planit-io
 * planit-xml
 
-Since the repo depends on the parent-pom to find its (shared) repositories, we must let Maven find the parent-pom first, either:
-
-* localy clone the parent pom repo and run mvn install on it before conducting a Maven build, or
-* add the parent pom repository to your maven (user) settings.xml by adding it to a profile like the following
-
-```xml
-  <profiles>
-    <profile>
-      <activation>
-        <property>
-          <name>!skip</name>
-        </property>
-      </activation>
-    
-      <repositories>
-        <repository>
-          <id>planit-repository.goplanit.org</id>
-          <name>PLANit Repository</name>
-          <url>http://repository.goplanit.org</url>
-        </repository>     
-      </repositories>
-    </profile>
-  </profiles>
-```
-
 ### Maven deploy
 
-Distribution management is setup via the parent pom such that Maven deploys this project to the PLANit online repository (also specified in the parent pom). To enable deployment ensure that you setup your credentials correctly in your settings.xml as otherwise the deployment will fail.
+Distribution management is set up via the parent pom such that Maven deploys this project to the PLANit online repository (also specified in the parent pom). To enable deployment ensure that you setup your credentials correctly in your settings.xml as otherwise the deployment will fail.
 
 ### Git Branching model
 
