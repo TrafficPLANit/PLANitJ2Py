@@ -6,16 +6,16 @@
 	<parent>
     <groupId>org.goplanit.parentpom</groupId>
     <artifactId>planit-parentpom</artifactId>
-		<version>0.3.1a1</version>
+		<version>0.4.0</version>
 	</parent>
 
 	<groupId>org.goplanit.python</groupId>
 	 <description>
     Interface to allow the Python side of PLANit (using Py4J) to connect to the Java side of PLANit.
     To use this interface alongside the rest of PLANit on the Python side of things, one must subsequently 
-    run pom_fat_jar_python.xml which is a separate build to gather all required resources and copy them across 
+    run pom_fat_jar_python.xml (from PLANitAll repo) which is a separate build to gather all required resources and copy them across
     with the J2Py build, to the Py2J repo's share/planit to allow all functionality be available for building
-    the Python package
+    the Python package. To be streamlined in future for easier use.
   </description>
 	<artifactId>planit-j2py</artifactId>
 	<packaging>jar</packaging>

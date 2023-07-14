@@ -22,6 +22,7 @@ public class PLANitJ2Py {
      * Logger for this class
      */
     private static Logger LOGGER = null;
+
     /**
      * The PLANit project available to Python users
      */
@@ -65,7 +66,7 @@ public class PLANitJ2Py {
         LOGGER.severe(e.getMessage());
       }
      
-      return (PlanItSimpleProject)this.project;      
+      return this.project;
     }
 
     /** 
