@@ -89,7 +89,12 @@ public class PLANitJ2Py {
             LOGGER.severe(errorMessage );
             throw new PlanItException(errorMessage);
         }
-        return Enum.valueOf((Class<Enum>)enumClass,EnumEntryName);        
+        try {
+          return Enum.valueOf((Class<Enum>) enumClass, EnumEntryName);
+        }catch (IllegalArgumentException e){
+          LOGGER.info("Could not convert enum for %s, trying upper case conversion");
+          return Enum.valueOf((Class<Enum>) enumClass, EnumEntryName.toUpperCase());
+        }
     }
     
 }
