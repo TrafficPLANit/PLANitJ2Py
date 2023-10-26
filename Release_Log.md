@@ -2,6 +2,10 @@
 
 PLANitJ2Py  Release log
 
+## 0.4.0
+
+* Add support for CI development by adding github actions and auto testing upon push commits
+
 ## 0.3.0
 
 * updated artifact id to conform with how this generally is setup, i.e. <application>-<subrepo> #2
