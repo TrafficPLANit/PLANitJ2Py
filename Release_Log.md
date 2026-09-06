@@ -4,7 +4,7 @@ PLANitJ2Py  Release log
 
 ## 0.5.0
 
-* No changes yet
+* Updated Py4J bridge dependency to 0.10.9.9
 
 ## 0.4.0
 
