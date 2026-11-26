@@ -9,10 +9,9 @@ import org.goplanit.io.project.PlanItSimpleProject;
 import py4j.GatewayServer;
 
 /**
- * Point of entry for the Python interface. Note that:
- * Py4J by default uses the TCP port 25333 to communicate from Python to Java and TCP port 25334 to communicate from Java to Python.
- * If you encounter "java.net.BindException: Address already in use exception", you should manually choose a different port than the default one.
- * It is also possible a previous instance is still running. In that case first close the previous instance and try again. 
+ * Point of entry for the Python interface. By default Py4J uses TCP port 25333 from Python to Java and TCP port 25334
+ * from Java to Python. On a "java.net.BindException: Address already in use exception", choose a port other than the
+ * default by hand. A previous instance may also still be running: then close it first and try again.
  * 
  * @author markr
  */
@@ -70,10 +69,11 @@ public class PLANitJ2Py {
     }
 
     /** 
-     * Due to the difficulty of creating an enum in Python (the gateway prefix to the path is inconvenient since it might change when changing
-     *  the variable name for example) we instead construct them on the Java side by providing their canonical class name solely based on the Java structure
-     *  This has the benefit that we can create Python enum counterparts whose values simply reflect their Java counterpart without any Py4J "name clutter"
-     *  TODO: If it is possible to do this as elegantly on the Python side than we should aim for that instead.
+     * Create an enum value on the Java side from its canonical class name, which depends on the Java structure only.
+     * Creating it in Python is awkward, as the gateway prefix of the path can change, for example when the variable
+     * name changes. This way Python enums can have values that match their Java counterpart, without Py4J "name
+     * clutter".
+     * TODO: if this can be done as neatly on the Python side, do it there instead.
      *  
      * @param enumCanonicalName         the package and class name of the enum
      * @param EnumEntryName                 the entry of the enum that we try to instantiate
